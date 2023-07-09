@@ -12,9 +12,10 @@ import matplotlib.animation as animation
 CANVAS_WIDTH = 300
 CANVAS_HEIGHT = 300
 
-GROUND = -75
+GROUND = -80
 
 PI = math.pi
+
 
 class Robo1leg:
     def __init__(self):
@@ -128,7 +129,6 @@ def create_animation(output):
     ani.save(os.path.join('result', output))
 
 
-
 if __name__ == '__main__':
     robo = Robo1leg()
     world = World()
@@ -157,6 +157,5 @@ if __name__ == '__main__':
         robo.theta2 = theta2
         robo.theta3 = theta3
         world.draw(t)
-
 
     create_animation('result.gif')
